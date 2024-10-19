@@ -11,6 +11,18 @@ name="title"
 class="rounded border-gray-200 w-full mb-4"
 value="{{ old('title', $post->title) }}"
 >
+<label class="uppercase text-gray-700 text-xs">Slug</label>
+<span class="text-xs text-red-600">
+    @error('slug')
+     {{ $message }} 
+     @enderror
+</span>
+<input 
+type="text" 
+name="slug" 
+class="rounded border-gray-200 w-full mb-4"
+value="{{ old('slug', $post->slug) }}"
+>
 <lable class="uppercase text-gray-700 text-xs">contenido</lable>
 <span class="text-xs text-red-600">
     @error('body')
